@@ -1,9 +1,14 @@
+@extends('layouts.app')
 <html>
 	<head>
-		<title>View Student Records</title>
+		<title>Listado de Clientes</title>
 		<meta charset="utf-8">
 	</head>
 	<body>
+		@section('title', 'Page Title')
+		@section('sidebar')
+		@parent
+		@endsection
 		<table border = "1">
 			<tr>
 				<td>ID</td>

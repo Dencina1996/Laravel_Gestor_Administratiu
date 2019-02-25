@@ -15,3 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('listaClientes','ListaClientesController@index');
+Route::get('añadirCliente','InsertarClienteController@insertform');
