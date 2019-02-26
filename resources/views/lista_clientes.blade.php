@@ -1,14 +1,12 @@
-@extends('layouts.app')
+@extends('home')
 <html>
 	<head>
 		<title>Listado de Clientes</title>
 		<meta charset="utf-8">
+		<link rel="shortcut icon" href="{{ asset('svg/favicon.png') }}">
 	</head>
 	<body>
-		@section('title', 'Page Title')
-		@section('sidebar')
-		@parent
-		@endsection
+		@section('content')
 		<table border = "1">
 			<tr>
 				<td>ID</td>
@@ -35,5 +33,6 @@
 			</tr>
 			@endforeach
 		</table>
+		@stop
 	</body>
 </html>

@@ -1,10 +1,13 @@
+@extends('home')
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Nou Client</title>
 	<meta charset="utf-8">
+	<link rel="shortcut icon" href="{{ asset('svg/favicon.png') }}">
 </head>
 <body>
+	@section('content')
 	<form action = "/create" method = "post">
 		@csrf
 		<input type="text" name="name" placeholder="Nombre">
@@ -24,6 +27,7 @@
 		<input type="number" name="cp" placeholder="Código Postal">
 		<br>
 		<input type="submit" value="Registrar Cliente">
+		@stop
 </body>
 </html>
  

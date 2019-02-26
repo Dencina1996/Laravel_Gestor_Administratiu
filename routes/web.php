@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 Route::get('listaClientes','ListaClientesController@index');
 Route::get('añadirCliente','InsertarClienteController@insertform');
+Route::post('create','InsertarClienteController@insert');
+Route::get('index','InsertarClienteController@insertform');

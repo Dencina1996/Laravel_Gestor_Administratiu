@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Carbon\Carbon;
 
 class InsertarClienteController extends Controller {
    public function insertform() {
