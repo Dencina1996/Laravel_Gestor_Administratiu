@@ -1,0 +1,38 @@
+table {	width: 70%;
+		border: solid 2px black;
+		border-collapse: collapse;
+		margin-left: 10px;
+		float: left;
+		text-align: center;
+}
+
+tr,td {	border: 1px solid black;
+		padding: 5px;
+}
+
+.formularioCliente {	left: 0;
+						top: 0;
+						margin: auto;
+						padding: 10px;
+						border: solid 2px black;
+						border-radius: 3px;
+						display: table;
+						background-color: yellow;
+	}
+
+.formularioCliente > form {	display: table-cell;
+							text-align: center;
+							vertical-align: middle;
+	}
+
+.formularioCliente > form > input {	border: solid 2px black;
+									border-radius: 3px;
+									padding: 5px;
+									margin: 2px;
+
+	}	
+
+#nuevoUsuario {	float: right;
+				margin-right: 10px;
+				cursor: pointer;
+	}

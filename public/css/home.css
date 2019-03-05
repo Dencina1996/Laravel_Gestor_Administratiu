@@ -1,46 +1,22 @@
-body {
-	margin: auto;
-	font-family: 'Poppins', sans-serif;
-}
+.header {	height: 100px;
+			width: 100%;
+			background-color: #00495f;
+			text-align: center;
+			margin: 0;
+			border-bottom: solid 2px black;
+			border-top: solid 1px black;
+			color: white;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: #000;
+	}
 
-.Header {
-	height: 100px;
-	width: 100%;
-	background-color: #0094BB;
-	text-align: center;
-	margin: 0;
-	border: solid 2px black;
-	color: white;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: #000;
-}
+.headerMenu {	width: 100%;
+				background-color: #00495f;
+				border: solid 20px black: 
+				margin-left: 10px;
+				margin-right: 10px;
+	}
 
-.HeaderMenu {
-	width: 100%;
-	height: 20px;
-	background-color: #8E8E8E;
-	border: solid 20px black: 
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-.HeaderDirectories {
-	margin-left: 5px;
-	text-decoration: none;
-}
-
-.HeaderDirectories > a {
-	height: 20px;
-	background-color: #ff8d00;
-	color: white;
-	padding: 2px;
-	border: solid 2px black;
-	text-decoration: none;
-	padding: 10px;
-	transition: 0.5s;
-}
-
-.HeaderDirectories > a:hover {
-	background-color: #006782;
-	transition: 0.5s;
-}
+.headerDirectories {	margin-left: 5px;
+						text-decoration: none;
+	}
