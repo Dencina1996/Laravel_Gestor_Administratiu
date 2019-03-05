@@ -14,7 +14,7 @@
 			<h1>DK Manager</h1>
 		</div>
 		<div class="headerDirectories">
-			<a href="/" class="buttonLinks">Home</a>
+			<a href="/" class="buttonLinks">Inicio</a>
 			<a href="/listaClientes" class="buttonLinks">Listado de Clientes</a>
 		</div>
 	@show

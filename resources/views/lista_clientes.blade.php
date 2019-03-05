@@ -7,6 +7,7 @@
 		<link rel="shortcut icon" href="{{ asset('svg/favicon.png') }}">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script type="text/javascript" src="{{ asset('js/clientList.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/min.js') }}"></script>
 	</head>
 	<body>
 		@section('content')
@@ -15,15 +16,15 @@
 		<div class="tablaClientes">
 			<table>
 				<tr>
-					<td>ID</td>
-					<td>Nombre</td>
-					<td>Email</td>
-					<td>Teléfono</td>
-					<td>CIF/NIF</td>
-					<td>Dirección</td>
-					<td>Província</td>
-					<td>Localidad</td>
-					<td>Código Postal</td>
+					<td><b>ID</b></td>
+					<td><b>Nombre</b></td>
+					<td><b>Email</b></td>
+					<td><b>Teléfono</b></td>
+					<td><b>CIF/NIF</b></td>
+					<td><b>Dirección</b></td>
+					<td><b>Província</b></td>
+					<td><b>Localidad</b></td>
+					<td><b>Código Postal</b></td>
 				</tr>
 				@foreach ($clientes as $cliente)
 				<tr>

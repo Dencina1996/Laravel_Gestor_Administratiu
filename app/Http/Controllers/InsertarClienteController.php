@@ -35,7 +35,6 @@ class InsertarClienteController extends Controller {
 		'CP'=>$cp,
 		'Fecha_Modificacion'=>$mytime
 		]);
-	echo "Record inserted successfully.<br/>";
-	echo '<a href = "/insert">Click Here</a> to go back.';
+	return back();
 	}
 }

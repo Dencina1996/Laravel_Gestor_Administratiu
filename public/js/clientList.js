@@ -91,3 +91,4 @@ function esconderPanelUsuario() {
 	$("a[id='ocultarPanel']").remove();
 	$("div[class='formularioCliente']").attr("style","visibility: hidden");				
 }	
+
