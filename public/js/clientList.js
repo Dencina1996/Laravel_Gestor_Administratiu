@@ -92,3 +92,6 @@ function esconderPanelUsuario() {
 	$("div[class='formularioCliente']").attr("style","visibility: hidden");				
 }	
 
+function checkRow(element) {
+	alert($(element).html());
+}

@@ -11,8 +11,7 @@ tr,td {	border: 1px solid black;
 		padding: 3px;
 	}
 
-tr:nth-child(1) {
-	background-color: lightgrey;
+tr:nth-child(1) {	background-color: lightgrey;
 	}
 
 .formularioCliente {	left: 0;

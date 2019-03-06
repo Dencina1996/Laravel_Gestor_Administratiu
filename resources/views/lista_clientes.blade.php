@@ -27,7 +27,7 @@
 					<td><b>Código Postal</b></td>
 				</tr>
 				@foreach ($clientes as $cliente)
-				<tr>
+				<tr onclick="checkRow(this)">
 					<td>{{ $cliente->ID_Cliente}}</td>
 					<td>{{ $cliente->Nombre}}</td>
 					<td>{{ $cliente->Email}}</td>
