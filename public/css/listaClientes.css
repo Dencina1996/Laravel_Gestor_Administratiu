@@ -32,14 +32,18 @@ tr:nth-child(1) {	background-color: lightgrey;
 							vertical-align: middle;
 	}
 
-.formularioCliente > form > input {	border: solid 2px black;
-									border-radius: 5px;
-									outline: none;
-									padding: 7px;
-									margin: 2px;
-	}	
-
 #nuevoUsuario {	float: right;
 				margin-right: 10px;
 				cursor: pointer;
+	}
+
+#detallesUsuario {	width: 70%;
+					border: solid 2px black;
+					margin-left: 10px;
+					margin-top: 10px;
+					float: left;
+					text-align: center;
+					font-size: 14px;
+					display: inline-block;
+					padding: 10px;
 	}

@@ -18,6 +18,13 @@ body {	margin: auto;
 						transition: 0.2s;
 	}
 
+input {	border: solid 2px black;
+									border-radius: 5px;
+									outline: none;
+									padding: 7px;
+									margin: 2px;
+	}	
+
 input[type='submit'] {	background-color: #d00000;
 						color: white;
 						cursor: pointer;			
@@ -29,3 +36,4 @@ input[type='submit'] {	background-color: #d00000;
 input[type='submit']:hover {	background-color: #ff0000;
 								transition: 0.2s;
 	}
+

@@ -93,5 +93,84 @@ function esconderPanelUsuario() {
 }	
 
 function checkRow(element) {
-	alert($(element).html());
+	$("div[id='detallesUsuario']").attr("style","visibility: visible");	
+	var array = [];
+	$(element).children('td').each(function(index, el) {
+		array.push(el.innerText);
+	});
+    $("input[name='user_name']").val(array[1]);
+    $("input[name='user_mail']").val(array[2]);
+    $("input[name='user_phone']").val(array[3]);
+    $("input[name='user_dni']").val(array[4]);
+    $("input[name='user_address']").val(array[5]);
+    $("input[name='user_country']").val(array[6]);
+    $("input[name='user_city']").val(array[7]);
+    $("input[name='user_cp']").val(array[8]);
+}
+
+function checkForm(){
+    $("input").css('border', 'solid 2px black');
+    $("p[name='errors']").text("");
+    var count=8;
+    name= $("input[name='name']").val();
+    if (name == "") {
+        $("input[name='name']").css('border', 'solid 2px red');
+        $("p[name='errors']").append("Introduce un nombre<br>");
+    }else {
+        count=count-1;
+    }
+    mail= $("input[name='mail']").val();
+    if (mail == "") {
+        $("input[name='mail']").css('border', 'solid 2px red');
+        $("p[name='errors']").append("Introduce un mail<br>");
+    }else {
+        count=count-1;
+    }
+    phone= $("input[name='phone']").val();
+    if (phone == "") {
+        $("input[name='phone']").css('border', 'solid 2px red');
+        $("p[name='errors']").append("Introduce un número de teléfono<br>");
+    }else {
+        count=count-1;
+    }
+    dni= $("input[name='dni']").val();
+    if (dni == "") {
+        $("input[name='dni']").css('border', 'solid 2px red');
+        $("p[name='errors']").append("Introduce un DNI válido<br>");
+    }else {
+        count=count-1;
+    }
+    address= $("input[name='address']").val();
+    if (address == "") {
+        $("input[name='address']").css('border', 'solid 2px red');
+        $("p[name='errors']").append("Introduce una dirección válida<br>");
+    }else {
+        count=count-1;
+    }
+    country= $("input[name='country']").val();
+    if (country == "") {
+        $("input[name='country']").css('border', 'solid 2px red');
+        $("p[name='errors']").append("Introduce una provincia válida<br>");
+    }else {
+        count=count-1;
+    }
+    city= $("input[name='city']").val();
+    if (city == "") {
+        $("input[name='city']").css('border', 'solid 2px red');
+        $("p[name='errors']").append("Introduce una ciudad válida<br>");
+    }else {
+        count=count-1;
+    }
+    cp= $("input[name='cp']").val();
+    if (cp == "") {
+        $("input[name='cp']").css('border', 'solid 2px red');
+        $("p[name='errors']").append("Introduce un código postal válido<br>");
+    }else {
+        count=count-1;
+    }
+    if (count!=0) {
+        return false;
+    }else {
+        return true;
+    }
 }
