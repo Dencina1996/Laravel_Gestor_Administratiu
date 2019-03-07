@@ -37,3 +37,25 @@ input[type='submit']:hover {	background-color: #ff0000;
 								transition: 0.2s;
 	}
 
+#errorDiv {		top: 150px;
+				left: 10px;
+				width: 25%;
+				background-color: white;
+				border: solid 2px black;
+				border-radius: 5px;
+				padding: 5px 0px 0px 5px;
+				animation: displayError 1s infinite;
+				position: fixed;
+				padding-bottom: 5px;
+				word-wrap: break-word;
+	}
+
+@keyframes displayError {	from { transform: none; }
+							50% { box-shadow: red 0px 0px 10px 1px; }
+							to { transform: none; }
+	}
+
+#errorDiv > img {	height: 32px;
+					width: 32px;
+					vertical-align: middle;
+	}

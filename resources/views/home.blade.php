@@ -21,5 +21,13 @@
 	<div class="Content">
 		@yield('content')
 	</div>
+	<!--<div id="errorDiv">
+		<img src="svg/error.jpg">
+			Campo <b>Nombre</b> sin rellenar
+		<br>
+		<img src="svg/error.jpg">
+			Campo <b>Email</b> sin rellenar
+		<br>
+	</div>-->
 </body>
 </html>

@@ -16,7 +16,7 @@
 		<div class="tablaClientes">
 			<table>
 				<tr>
-					<td><b>ID</b></td>
+					<td onclick="errorDisplay()"><b>ID</b></td>
 					<td><b>Nombre</b></td>
 					<td><b>Email</b></td>
 					<td><b>Teléfono</b></td>
