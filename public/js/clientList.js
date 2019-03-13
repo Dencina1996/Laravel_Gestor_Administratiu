@@ -98,6 +98,7 @@ function checkRow(element) {
 	$(element).children('td').each(function(index, el) {
 		array.push(el.innerText);
 	});
+	$("input[name='idCliente']").val(array[0]);
     $("input[name='user_name']").val(array[1]);
     $("input[name='user_mail']").val(array[2]);
     $("input[name='user_phone']").val(array[3]);
