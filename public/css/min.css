@@ -48,14 +48,14 @@ input[type='submit']:hover {	background-color: #ff0000;
 				position: fixed;
 				padding-bottom: 5px;
 				word-wrap: break-word;
+				text-align: center;
 	}
 
 @keyframes displayError {	from { transform: none; }
-							50% { box-shadow: red 0px 0px 10px 1px; }
+							50% { box-shadow: red 0px 0px 5px 2px; }
 							to { transform: none; }
 	}
 
 #errorDiv > img {	height: 32px;
 					width: 32px;
-					vertical-align: middle;
 	}

@@ -16,7 +16,7 @@
 		<div class="tablaClientes">
 			<table>
 				<tr>
-					<td onclick="errorDisplay()"><b>ID</b></td>
+					<td><b>ID</b></td>
 					<td><b>Nombre</b></td>
 					<td><b>Email</b></td>
 					<td><b>Teléfono</b></td>
@@ -40,6 +40,7 @@
 				</tr>
 				@endforeach
 			</table>
+			<!-- 
 			<div id="detallesUsuario" style="visibility: hidden;">
 				<form action = "/create" method = "post">
 					<br>
@@ -73,12 +74,13 @@
 					</div>
 				</form>
 			</div>
+			-->
 			<div class="formularioCliente" style="visibility: hidden;">
-				<form action = "/create" method = "post" onsubmit="return checkForm()">
+				<form action = "/create" method = "post" onsubmit="return checkEmptyFields()">
 					@csrf
 					<input type="text" name="name" placeholder="Nombre" maxlength="100">
 					<br>
-					<input type="email" name="mail" placeholder="Email" maxlength="100">
+					<input type="text" name="mail" placeholder="Email" maxlength="100">
 					<br>
 					<input type="text" name="phone" placeholder="Teléfono" maxlength="9">
 					<br>
