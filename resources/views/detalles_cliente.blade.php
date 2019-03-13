@@ -11,24 +11,12 @@
 	</head>
 	<body>
 		@section('content')
-		<a id="nuevoUsuario" class="buttonLinks" onclick="mostrarPanelUsuario()">Añadir Cliente</a>
 		<br><br><br>
 		<div class="tablaClientes">
 			<table>
-				<tr>
-					<td><b>ID</b></td>
-					<td><b>Nombre</b></td>
-					<td><b>Email</b></td>
-					<td><b>Teléfono</b></td>
-					<td><b>CIF/NIF</b></td>
-					<td><b>Dirección</b></td>
-					<td><b>Província</b></td>
-					<td><b>Localidad</b></td>
-					<td><b>Código Postal</b></td>
-				</tr>
 				@foreach ($clientes as $cliente)
-				<tr onClick="window.open('infoCliente');">
-					<td name="idC">{{ $cliente->ID_Cliente}}</td>
+				<tr onclick="checkRow(this)">
+					<td>{{ $cliente->ID_Cliente}}</td>
 					<td>{{ $cliente->Nombre}}</td>
 					<td>{{ $cliente->Email}}</td>
 					<td>{{ $cliente->Telefono}}</td>
@@ -40,9 +28,8 @@
 				</tr>
 				@endforeach
 			</table>
-			<!-- 
 			<div id="detallesUsuario" style="visibility: hidden;">
-				<form action = "/create" method = "post">
+				<form action = "/detallesCliente" method = "post">
 					<br>
 					<div style="float: left; width: 50%; text-align: left;">
 						<label>Nombre: </label>
@@ -72,34 +59,34 @@
 							<input type="text" name="user_cp" placeholder="Código Postal" maxlength="5">
 							<br>
 					</div>
+					<input type="submit" name="submit" value="Guardar">
 				</form>
-			</div>
-			-->
-			<div class="formularioCliente" style="visibility: hidden;">
-				<form action = "/create" method = "post" onsubmit="return checkEmptyFields()">
+				<div class="tablaClientes">
+					<table>
+					<td><b>ID Archivo</b></td>
+					<td><b>ID Cliente</b></td>
+					<td><b>ID Venta</b></td>
+					<td><b>Nombre Archivo</b></td>
+						@foreach ($archivos as $archivo)
+						<tr onclick="checkRow(this)">
+							<td>{{ $archivo->ID_Archivo}}</td>
+							<td>{{ $archivo->ID_Cliente}}</td>
+							<td>{{ $archivo->ID_Venta}}</td>
+							<td>{{ $archivo->Ruta_Archivo}}</td>
+						</tr>
+						@endforeach
+					</table>
+				</div>
+				<br><br><br><br>
+				<form action="addFile" method="post" enctype="multipart/form-data">
 					@csrf
-					<input type="text" name="name" placeholder="Nombre" maxlength="100">
-					<br>
-					<input type="text" name="mail" placeholder="Email" maxlength="100">
-					<br>
-					<input type="text" name="phone" placeholder="Teléfono" maxlength="9">
-					<br>
-					<input type="text" name="dni" placeholder="CIF/NIF" maxlength="9">
-					<br>
-					<input type="text" name="address" placeholder="Dirección" maxlength="100">
-					<br>
-					<input type="text" name="country" placeholder="Província" maxlength="50">
-					<br>
-					<input type="text" name="city" placeholder="Ciudad" maxlength="50">
-					<br>
-					<input type="text" name="cp" placeholder="Código Postal" maxlength="5">
-					<br>
-					<input type="submit" value="Registrar Cliente">
-					<p name="errors"></p>
-				</form>
+					<input type="number" name="idCliente" style="visibility: hidden;">
+		            <input type="file" name="archivo" id="archivo">
+		            <input type="submit" value="Subir archivo">
+	        	</form>
 			</div>
-		@stop
-		@csrf
-	</div>
+			@stop
+			@csrf
+		</div>
 	</body>
 </html>
