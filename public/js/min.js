@@ -16,4 +16,3 @@ function errorDisplay(text) {
 		$("div[id='errorDiv']").remove();
 	}, 5000);
 }
-

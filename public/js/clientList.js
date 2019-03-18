@@ -93,19 +93,7 @@ function esconderPanelUsuario() {
 }	
 
 function checkRow(element) {
-	$("div[id='detallesUsuario']").attr("style","visibility: visible");	
-	var array = [];
-	$(element).children('td').each(function(index, el) {
-		array.push(el.innerText);
-	});
-    $("input[name='user_name']").val(array[1]);
-    $("input[name='user_mail']").val(array[2]);
-    $("input[name='user_phone']").val(array[3]);
-    $("input[name='user_dni']").val(array[4]);
-    $("input[name='user_address']").val(array[5]);
-    $("input[name='user_country']").val(array[6]);
-    $("input[name='user_city']").val(array[7]);
-    $("input[name='user_cp']").val(array[8]);
+	$("div[id='detallesUsuario']").attr("style","visibility: visible");
 }
 
 function isDni(dni) {
@@ -153,7 +141,7 @@ function isMailOk(mail) {
 
 function checkEmptyFields() {
 	
-	var inputFields = $("form[action='/create']").find('input[type="text"],input[type="email"],input[type="number"]');   
+	var inputFields = $("form[action='/create']").find('input[type="text"],input[type="email"]');   
     var inputDNI = $("input[name='dni']");
     var inputPhone = $("input[name='phone']");
     var inputMail = $("input[name='mail']");
