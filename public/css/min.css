@@ -58,4 +58,28 @@ input[type='submit']:hover {	background-color: #ff0000;
 
 #errorDiv > img {	height: 32px;
 					width: 32px;
-}
+	}
+
+ul.breadcrumb {	padding: 10px 16px;
+  				list-style: none;
+  				background-color: lightgrey;
+  				border: solid 2px black;
+  				border-width: 2px 0px 2px 0px;
+	}
+
+ul.breadcrumb li {	display: inline;
+  					font-size: 18px;
+	}
+
+ul.breadcrumb li+li:before {	padding: 8px;
+  								color: black;
+  								content: "/\00a0";
+	}
+
+ul.breadcrumb li a {	color: black;
+  						text-decoration: none;
+	}  						
+
+ul.breadcrumb li a:hover {	color: #dd0000;
+  							text-decoration: none;
+	}
