@@ -29,6 +29,11 @@ class DatabaseSeeder extends Seeder
                 'Fecha_Modificacion'=>date('Y-m-d H:i:s'),
             ]);
         }
+         DB::table('Clientes')->insert([
+            'name' => Str::random(10),
+            'email' => Str::random(10).'@gmail.com',
+            'password' => bcrypt('secret'),
+        ]);
     }
 
     function getNIF(){

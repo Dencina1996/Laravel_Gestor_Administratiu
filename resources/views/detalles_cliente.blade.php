@@ -34,6 +34,11 @@
 				</tr>
 				@foreach ($clientes as $cliente)
 				<tr>
+		<br><br><br>
+		<div class="tablaClientes">
+			<table>
+				@foreach ($clientes as $cliente)
+				<tr onclick="checkRow(this)">
 					<td>{{ $cliente->ID_Cliente}}</td>
 					<td>{{ $cliente->Nombre}}</td>
 					<td>{{ $cliente->Email}}</td>
@@ -48,6 +53,10 @@
 				@endforeach
 			</table>
 			<div id="detallesUsuario" style="display: none;">
+				</tr>
+				@endforeach
+			</table>
+			<div id="detallesUsuario" style="visibility: hidden;">
 				<form action = "/detallesCliente" method = "post">
 					<br>
 					<div style="float: left; width: 50%; text-align: left;">
@@ -63,6 +72,16 @@
 						<label>CIF/NIF/DNI: </label>
 							<input type="text" name="user_dni" placeholder="CIF/NIF" maxlength="9" 
 							value="{{ $cliente->CIF_NIF}}">
+							<input type="text" name="user_name" placeholder="Nombre" maxlength="100">
+							<br>
+						<label>E-Mail: </label>
+							<input type="email" name="user_mail" placeholder="Email" maxlength="100">
+							<br>
+						<label>Teléfono: </label>
+							<input type="text" name="user_phone" placeholder="Teléfono" maxlength="9">
+							<br>
+						<label>CIF/NIF/DNI: </label>
+							<input type="text" name="user_dni" placeholder="CIF/NIF" maxlength="9">
 							<br>		
 					</div>
 					<div style="float: right; width: 50%; text-align: right;">
@@ -77,6 +96,16 @@
 							<br>		
 						<label>Código Postal: </label>
 							<input type="text" name="user_cp" placeholder="Código Postal" maxlength="5" value="{{ $cliente->CP}}">
+							<input type="text" name="user_address" placeholder="Dirección" maxlength="100">
+							<br>		
+						<label>Província: </label>
+							<input type="text" name="user_country" placeholder="Província" maxlength="50">
+							<br>		
+						<label>Localidad: </label>
+							<input type="text" name="user_city" placeholder="Código Postal" maxlength="5">
+							<br>		
+						<label>Código Postal: </label>
+							<input type="text" name="user_cp" placeholder="Código Postal" maxlength="5">
 							<br>
 					</div>
 					<input type="submit" name="submit" value="Guardar">
@@ -120,5 +149,32 @@
 		</div>
 		@stop
 		@csrf
+				<div class="tablaClientes">
+					<table>
+					<td><b>ID Archivo</b></td>
+					<td><b>ID Cliente</b></td>
+					<td><b>ID Venta</b></td>
+					<td><b>Nombre Archivo</b></td>
+						@foreach ($archivos as $archivo)
+						<tr onclick="checkRow(this)">
+							<td>{{ $archivo->ID_Archivo}}</td>
+							<td>{{ $archivo->ID_Cliente}}</td>
+							<td>{{ $archivo->ID_Venta}}</td>
+							<td>{{ $archivo->Ruta_Archivo}}</td>
+						</tr>
+						@endforeach
+					</table>
+				</div>
+				<br><br><br><br>
+				<form action="addFile" method="post" enctype="multipart/form-data">
+					@csrf
+					<input type="number" name="idCliente" style="visibility: hidden;">
+		            <input type="file" name="archivo" id="archivo">
+		            <input type="submit" value="Subir archivo">
+	        	</form>
+			</div>
+			@stop
+			@csrf
+		</div>
 	</body>
 </html>

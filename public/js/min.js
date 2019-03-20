@@ -15,4 +15,3 @@ function errorDisplay(text) {
 	setTimeout(function() {
 		$("div[id='errorDiv']").remove();
 	}, 5000);
-}

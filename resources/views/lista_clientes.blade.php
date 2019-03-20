@@ -33,6 +33,8 @@
 					<form action="detallesCliente" method="post">
 					@csrf
 					<td>{{ $cliente->ID_Cliente}}<input type="number" name="id" value="{{ $cliente->ID_Cliente}}" style="display: none"></td>
+				<tr onClick="window.open('infoCliente');">
+					<td name="idC">{{ $cliente->ID_Cliente}}</td>
 					<td>{{ $cliente->Nombre}}</td>
 					<td>{{ $cliente->Email}}</td>
 					<td>{{ $cliente->Telefono}}</td>
@@ -46,7 +48,42 @@
 				</tr>
 				@endforeach
 			</table>
+
+			<!-- 
+			<div id="detallesUsuario" style="visibility: hidden;">
+				<form action = "/create" method = "post">
+					<br>
+					<div style="float: left; width: 50%; text-align: left;">
+						<label>Nombre: </label>
+							<input type="text" name="user_name" placeholder="Nombre" maxlength="100">
+							<br>
+						<label>E-Mail: </label>
+							<input type="email" name="user_mail" placeholder="Email" maxlength="100">
+							<br>
+						<label>Teléfono: </label>
+							<input type="text" name="user_phone" placeholder="Teléfono" maxlength="9">
+							<br>
+						<label>CIF/NIF/DNI: </label>
+							<input type="text" name="user_dni" placeholder="CIF/NIF" maxlength="9">
+							<br>		
+					</div>
+					<div style="float: right; width: 50%; text-align: right;">
+						<label>Dirección: </label>
+							<input type="text" name="user_address" placeholder="Dirección" maxlength="100">
+							<br>		
+						<label>Província: </label>
+							<input type="text" name="user_country" placeholder="Província" maxlength="50">
+							<br>		
+						<label>Localidad: </label>
+							<input type="text" name="user_city" placeholder="Código Postal" maxlength="5">
+							<br>		
+						<label>Código Postal: </label>
+							<input type="text" name="user_cp" placeholder="Código Postal" maxlength="5">
+							<br>
+					</div>
+				</form>
 			</div>
+			-->
 			<div class="formularioCliente" style="visibility: hidden;">
 				<form action = "/create" method = "post" onsubmit="return checkEmptyFields()">
 					@csrf
@@ -57,6 +94,9 @@
 					<input type="email" name="mail" placeholder="Email" maxlength="100">
 					<br><br>
 					<label>Teléfono</label>
+					<br>
+					<input type="text" name="mail" placeholder="Email" maxlength="100">
+					<br>
 					<input type="text" name="phone" placeholder="Teléfono" maxlength="9">
 					<br><br>
 					<label>CIF/NIF/DNI</label>

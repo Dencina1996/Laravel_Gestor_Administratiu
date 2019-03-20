@@ -6,6 +6,7 @@
 	use App\Http\Controllers\Controller;
 	
 	class DetallesClienteController extends Controller {
+
 		public function detalles(Request $request){
 		$id = $request->input('id');
 		$clientes = DB::select('select * from Clientes where ID_Cliente='.$id.'');

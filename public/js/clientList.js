@@ -110,6 +110,22 @@ function isMailOk(mail) {
     if (reg.test($(mail).val())) {
         return true;
     } else {
+
+        return true;
+    } else {
+        errorDisplay("<b>El teléfono introducido es incorrecto</b>");
+        return false;
+    }
+}
+
+function isMailOk(mail) {
+
+    var inputMail = $("input[name='mail']");
+    var reg = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+
+    if (reg.test($(mail).val())) {
+        return true;
+    } else {
         errorDisplay("<b>Correo electrónico incorrecto</b>");
         return false;
     }
@@ -118,7 +134,11 @@ function isMailOk(mail) {
 
 function checkEmptyFields() {
 	
+
 	var inputFields = $("form[action='/create']").find('input[type="text"],input[type="email"]');   
+
+	var inputFields = $("form[action='/create']").find('input[type="text"],input[type="email"],input[type="number"]');   
+
     var inputDNI = $("input[name='dni']");
     var inputPhone = $("input[name='phone']");
     var inputMail = $("input[name='mail']");

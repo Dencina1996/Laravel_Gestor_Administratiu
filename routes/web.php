@@ -23,3 +23,8 @@ Route::post('update','UpdateClienteController@update');
 Route::post('addFile','InsertarArchivoController@insertFile');
 Route::post('detallesVenta','DetallesVentaController@detalles');
 Route::post('insertVenta','InsertarVentaController@insert');
+Route::get('infoCliente','InfoClienteController@index');
+
+Route::get('detallesCliente','DetallesClienteController@detalles');
+Route::post('update','UpdateClienteController@update');
+Route::post('addFile','InsertarArchivoController@insertFile');
