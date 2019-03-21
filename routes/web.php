@@ -23,8 +23,14 @@ Route::post('update','UpdateClienteController@update');
 Route::post('addFile','InsertarArchivoController@insertFile');
 Route::post('detallesVenta','DetallesVentaController@detalles');
 Route::post('insertVenta','InsertarVentaController@insert');
+<<<<<<< HEAD
+Route::post('buscarNombre','BuscarNombreClientesController@index');
+Route::post('buscarDNI','BuscarDNIClientesController@index');
+Route::post('buscarLocalidad','BuscarLocalidadClientesController@index');
+=======
 Route::get('infoCliente','InfoClienteController@index');
 
 Route::get('detallesCliente','DetallesClienteController@detalles');
 Route::post('update','UpdateClienteController@update');
 Route::post('addFile','InsertarArchivoController@insertFile');
+>>>>>>> e0ff4d5bb87bb73d3b2b1ef2b9bf486fa78037bc

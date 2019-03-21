@@ -11,11 +11,14 @@
 	</head>
 	<body>
 		@section('content')
+<<<<<<< HEAD
+=======
 		<ul class="breadcrumb">
 			<li><a href="/">Home</a></li>
 			<li><a href="/listaClientes">Listado de Clientes</a></li>
 			<li><a href="javascript:window.location.reload(true)">Detalles de Cliente</a></li>
 		</ul>
+>>>>>>> e0ff4d5bb87bb73d3b2b1ef2b9bf486fa78037bc
 		<a id="nuevoUsuario" class="buttonLinks" onclick="mostrarPanelUsuario()">Añadir Venta</a>
 		<br><br><br>
 		<div class="tablaClientes">
@@ -146,6 +149,8 @@
 					<p name="errors"></p>
 				</form>
 			</div>
+<<<<<<< HEAD
+=======
 		</div>
 		@stop
 		@csrf
@@ -175,6 +180,9 @@
 			</div>
 			@stop
 			@csrf
+>>>>>>> e0ff4d5bb87bb73d3b2b1ef2b9bf486fa78037bc
 		</div>
+		@stop
+		@csrf
 	</body>
 </html>

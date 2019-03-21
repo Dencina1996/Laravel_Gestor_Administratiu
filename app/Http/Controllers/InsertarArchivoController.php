@@ -17,10 +17,13 @@ class InsertarArchivoController extends Controller {
    	$tipo = $request->input('tipo');
    	$ruta = ''.$tipo.'_'.date('dmYHis').'.pdf';
    	$request->archivo->storeAs('public', ''.$tipo.'_'.date('dmYHis').'.pdf');
+<<<<<<< HEAD
+=======
    	$idCliente = $request->input("idCliente");
    	$idVenta = null;
    	$ruta = $request->archivo->getClientOriginalName();
    	$request->archivo->storeAs('files', $request->archivo->getClientOriginalName());
+>>>>>>> e0ff4d5bb87bb73d3b2b1ef2b9bf486fa78037bc
    	DB::table('Archivos')->insert([
 		'ID_Archivo'=>$idArchivo,
 		'ID_Cliente'=>$idCliente,

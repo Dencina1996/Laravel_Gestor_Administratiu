@@ -39,8 +39,7 @@
 			</tr>
 			@endforeach
 		</table>
-		<br><br><br>
-			<table>
+			<table style="margin-top: 20px;">
 				<tr>
 					<td>ID Archivo</td>
 					<td>ID Cliente</td>
@@ -70,7 +69,6 @@
 				</tr>
 				@endforeach
 			</table>
-			<br><br><br><br><br>
 		</div>
 			<div class="FormularioArchivos">
 			<p name="error" align="center"></p>

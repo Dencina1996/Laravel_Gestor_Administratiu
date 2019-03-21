@@ -29,11 +29,14 @@ class DatabaseSeeder extends Seeder
                 'Fecha_Modificacion'=>date('Y-m-d H:i:s'),
             ]);
         }
+<<<<<<< HEAD
+=======
          DB::table('Clientes')->insert([
             'name' => Str::random(10),
             'email' => Str::random(10).'@gmail.com',
             'password' => bcrypt('secret'),
         ]);
+>>>>>>> e0ff4d5bb87bb73d3b2b1ef2b9bf486fa78037bc
     }
 
     function getNIF(){
@@ -44,4 +47,8 @@ class DatabaseSeeder extends Seeder
     function LetraNIF($dni) { 
         return $letraNif= substr ("TRWAGMYFPDXBNJZSQVHLCKEO", $dni % 23, 1); 
     } 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e0ff4d5bb87bb73d3b2b1ef2b9bf486fa78037bc

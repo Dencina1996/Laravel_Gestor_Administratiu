@@ -14,6 +14,14 @@
 		
 		<a id="nuevoUsuario" class="buttonLinks" onclick="mostrarPanelUsuario()">Añadir Cliente</a>
 		<br><br><br>
+		<form method="post">
+			@csrf
+			<input type="text" name="textoBuscar">
+			<input type="submit" formaction="buscarNombre" name="Buscar" value="Buscar por nombre">
+			<input type="submit" formaction="buscarDNI" name="Buscar" value="Buscar por CIF/NIF">
+			<input type="submit" formaction="buscarLocalidad" name="Buscar" value="Buscar por Localidad">
+		</form>
+		<p name="textoBuscado"></p>
 		<div class="tablaClientes">
 			<table>
 				<tr>
@@ -94,9 +102,12 @@
 					<input type="email" name="mail" placeholder="Email" maxlength="100">
 					<br><br>
 					<label>Teléfono</label>
+<<<<<<< HEAD
+=======
 					<br>
 					<input type="text" name="mail" placeholder="Email" maxlength="100">
 					<br>
+>>>>>>> e0ff4d5bb87bb73d3b2b1ef2b9bf486fa78037bc
 					<input type="text" name="phone" placeholder="Teléfono" maxlength="9">
 					<br><br>
 					<label>CIF/NIF/DNI</label>
